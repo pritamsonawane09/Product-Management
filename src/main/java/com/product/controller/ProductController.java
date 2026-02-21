@@ -39,7 +39,7 @@ public class ProductController {
     }
 
     // 🔹 GET ALL PRODUCTS
-    @GetMapping
+    @GetMapping("/{productList}")
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAll();
         return ResponseEntity.ok(products);
